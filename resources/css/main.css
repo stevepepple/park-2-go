@@ -1,1 +1,271 @@
-html,body{height:100%;background-color:#1985d0}#appLoadingIndicator{position:absolute;background:url(../icons/park-and-go-logo.png) no-repeat;left:50%;top:50%;margin-left:-100px;margin-top:-100px;text-align:center;width:200px;height:200px}.gm-style-iw{overflow:visible!important}#ext-map-1{height:100%}.header{background:#1995d3!important;border-radius:none!important}.header .x-innerhtml{color:#fff;font-size:24px}#directionsUI{background:#fff url("../icons/search.png") 6px 6px no-repeat;background-size:32px 32px;box-shadow:0 2px 6px rgba(0,0,0,0.3),0 4px 15px -5px rgba(0,0,0,0.3);position:absolute;min-height:44px;height:44px;margin-left:2%;padding:0;padding-bottom:4px;top:4px;z-index:5}#directionsUI #search{margin:0}#directionsUI .x-form-fieldset{margin:0}#directionsUI .x-form-label{background:0;width:12%;min-width:80px;vertical-align:bottom}@media only screen and (max-width:767px){.x-form-label{font-size:78%;padding-top:18px}}#directionsUI .x-field-input{border:none!important}.x-field-search .x-field-input:before{content:""!important}#ext-element-20,#ext-element-36,#ext-element-40{border:none!important}.x-form-fieldset .x-field{border:none!important}#fromSelect,#toSelect,#travelPref{margin-bottom:4px}#search .travelPref{margin-top:20px;margin-left:4%}#search .travelPref .item{color:#737a80;font-size:13px;font-weight:400;margin-top:-50px;position:absolute;text-transform:uppercase}#search .travelPref .item.fastest{margin-left:46%}#search .travelPref .item.cheapest{margin-left:93%}#cities{margin:10px;width:100%}#directions div.mixed div{margin:2px;padding:4px;border-bottom:solid 1px #ccc;position:relative}#directions div.mixed span{font-size:16px}#directions div.mixed div.DRIVE,#directions div.mixed div.TRANSIT,#directions div.mixed div.TOTAL{padding-left:40px}#directions div.mixed div.DRIVE{background:url("../icons/driving.png") no-repeat}#directions div.mixed div.TRANSIT{background:url("../icons/transit.png") no-repeat}#directions div.mixed div.TOTAL{border-bottom:0;font-size:18px;font-weight:bold;color:#0d540d;background:url("../icons/route.png") no-repeat}#directions div .distance{position:absolute;font-weight:normal;font-size:16px;right:10px;color:#666}#routeOptions .option .time{display:none}#routeOptions .x-list-item{height:90px}#routeOptions .icon{float:left;height:50px;width:50px;margin-left:-4px}#routeOptions .icon.DRIVE{background:url("../icons/drive.png") no-repeat;background-size:50px 50px}#routeOptions .icon.TRANSIT{background:url("../icons/transit.png") no-repeat;background-size:50px 50px}#routeOptions .icon.MIXED{background:url("../icons/mixed.png") no-repeat;background-size:50px 50px}#ext-tabbar-1 .x-tab{margin-top:6px;background:0;border:0;box-shadow:none;width:30%;height:51px}#bottomNav{background:#ccc!important;position:relative}#bottomNav .x-button-icon{display:none}#bottomNav .x-tab{text-shadow:none;background:0}#bottomNav .x-button-label{color:#ccc;font-size:16px;margin-top:44px}#bottomNav #ext-tab-1{background:url("../icons/nav-directions.png") no-repeat top center;background-size:40px 40px!important}#bottomNav #ext-tab-2{background:url("../icons/nav-parking.png") no-repeat top center!important;background-size:40px 40px!important}#bottomNav #ext-tab-3{background:url("../icons/nav-about.png") no-repeat top center!important;background-size:40px 40px!important}#bottomNav #ext-tab-1.x-tab-active{background:url("../icons/nav-directions-selected.png") no-repeat top center!important;background-size:40px 40px!important}#bottomNav #ext-tab-2.x-tab-active{background:url("../icons/nav-parking-selected.png") no-repeat top center!important;background-size:40px 40px!important}#bottomNav #ext-tab-3.x-tab-active{background:url("../icons/nav-about-selected.png") no-repeat top center!important;background-size:40px 40px!important}#bottomNav .x-layout-box{background:#ccc;color:#333}.x-list-item{min-height:40px!important}.x-panel.x-floating,.x-msgbox,.x-form.x-floating{background:#fff!important}.x-button.x-button-back:before,.x-button.x-button-forward:before,.x-toolbar .x-button.x-button-back:before,.x-toolbar .x-button.x-button-forward:before{background:none!important}.x-title,.x-msgbox-dark .x-msgbox-text{color:#333!important;text-shadow:none!important}@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){#directionsUI{background-image:url(../icons/search.png)}#routeOptions .icon.DRIVE{background-image:url(../icons/drive.png)}#bottomNav #ext-tab-1{background-image:url(../icons/nav-directions.png)}#bottomNav #ext-tab-2{background-image:url(../icons/nav-parking.png)}#bottomNav #ext-tab-3{background-image:url(../icons/nav-about.png)}}
+/**
+ * Example of an initial loading indicator.
+ * It is recommended to keep this as minimal as possible to provide instant feedback
+ * while other resources are still being loaded for the first time */
+
+html, body {
+    height: 100%;
+    background-color: #1985D0
+}
+
+#appLoadingIndicator {
+    position: absolute;
+	background: url(../icons/park-and-go-logo.png) no-repeat;
+	left:50%;
+    top: 50%;
+    margin-left: -100px;
+	margin-top: -100px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+	/*
+    -webkit-animation-name: appLoadingIndicator;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+	*/
+}
+	
+
+.gm-style-iw { overflow: visible !important; }
+
+#ext-map-1 { height: 100%; }
+
+.header { 
+	background: #1995d3 !important;
+	border-radius: none !important;
+}
+
+.header .x-innerhtml {
+    color: #FFFFFF;
+    font-size:24px;
+}
+
+#directionsUI { 
+    background: #FFFFFF url("../icons/search.png") 6px 6px no-repeat; 
+	background-size: 32px 32px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),0 4px 15px -5px rgba(0,0,0,0.3);
+    position:absolute;
+	min-height:44px;
+	height:44px;
+    margin-left:2%;
+    padding:0px;
+	padding-bottom:4px;
+    top:4px;
+    z-index:5;
+}
+
+#directionsUI #search {
+	margin:0px;
+}
+
+#directionsUI .x-form-fieldset {
+	margin:0px;
+}
+#directionsUI .x-form-label {
+	background:none;
+    width:12%;
+	min-width: 80px;
+	vertical-align:bottom;
+}
+
+@media only screen and (max-width: 767px) {
+	.x-form-label{
+		font-size:78%;
+		padding-top:18px;
+	}
+}
+
+#directionsUI .x-field-input {
+	border:none !important;
+}
+
+
+.x-field-search .x-field-input:before {
+    content : "" !important;
+}
+
+#ext-element-20,
+#ext-element-36,
+#ext-element-40 {
+    border: none !important;
+}
+
+.x-form-fieldset .x-field {
+    border: none !important;
+}
+
+#fromSelect,
+#toSelect,
+#travelPref {
+    margin-bottom:4px;
+}
+
+#search .travelPref {
+    margin-top:20px;
+    margin-left:4%;
+}
+
+
+#search .travelPref .item {
+    color:#737A80;
+    font-size:13px;
+    font-weight: 400;
+    margin-top:-50px;
+    position:absolute;   
+    text-transform: uppercase;
+}
+
+#search .travelPref .item.fastest {
+    margin-left:46%;
+}
+
+#search .travelPref .item.cheapest {
+    margin-left:93%;
+}
+
+#cities {
+    margin:10px;
+    width:100%;
+}
+
+#directions div.mixed div {
+    margin:2px;
+    padding:4px;
+    border-bottom: solid 1px #CCCCCC;
+    position: relative;
+}
+
+#directions div.mixed span {
+    font-size:16px;
+}
+
+#directions div.mixed div.DRIVE,
+#directions div.mixed div.TRANSIT,
+#directions div.mixed div.TOTAL {
+    padding-left:40px;
+}
+
+#directions div.mixed div.DRIVE { background: url("../icons/driving.png") no-repeat; }
+#directions div.mixed div.TRANSIT { background: url("../icons/transit.png") no-repeat; }
+#directions div.mixed div.TOTAL { 
+    border-bottom: none;
+    font-size: 18px;
+    font-weight:bold;
+    color:#0D540D;
+    background: url("../icons/route.png") no-repeat; 
+}
+
+#directions div .distance {
+    position: absolute;
+    font-weight: normal;
+    font-size:16px;
+    right:10px;
+    color: #666666;
+}
+
+/*
+.x-paint-monitored {
+    padding:0px !important;
+} 
+*/
+	
+/* List of Route Options */
+#routeOptions .option .time {
+	display : none;
+}
+
+#routeOptions .x-list-item {
+	height: 90px;
+}
+
+#routeOptions .icon {
+	float:left;
+	height:50px;
+	width:50px;
+	margin-left:-4px;
+}
+
+#routeOptions .icon.DRIVE {
+	background: url("../icons/drive.png") no-repeat;
+	background-size: 50px 50px;		
+}
+
+#routeOptions .icon.TRANSIT {
+	background: url("../icons/transit.png") no-repeat;
+	background-size: 50px 50px;		
+}
+
+#routeOptions .icon.MIXED {
+	background: url("../icons/mixed.png") no-repeat;
+	background-size: 50px 50px;		
+}	
+    
+#ext-tabbar-1 .x-tab {
+    margin-top:6px;
+    background:none;
+    border:none;
+    box-shadow:none;
+    width:30%;
+    height:51px;
+}
+
+#bottomNav {
+    background:#CCCCCC !important;
+    position:relative;
+}
+
+/* Hide default icons */
+#bottomNav .x-button-icon { display:none; }
+
+#bottomNav .x-tab { text-shadow: none; background: none;}
+
+#bottomNav .x-button-label {
+    color:#CCCCCC;
+    font-size: 16px;
+    margin-top:44px;
+}
+
+#bottomNav #ext-tab-1 { background: url("../icons/nav-directions.png") no-repeat top center; background-size: 40px 40px !important; }
+#bottomNav #ext-tab-2 { background: url("../icons/nav-parking.png") no-repeat top center !important; background-size: 40px 40px !important;}
+#bottomNav #ext-tab-3 { background: url("../icons/nav-about.png") no-repeat top center !important; background-size: 40px 40px !important;}
+	
+#bottomNav #ext-tab-1.x-tab-active { background: url("../icons/nav-directions-selected.png") no-repeat top center !important; background-size: 40px 40px !important;} 
+#bottomNav #ext-tab-2.x-tab-active { background: url("../icons/nav-parking-selected.png") no-repeat top center !important; background-size: 40px 40px !important;}
+#bottomNav #ext-tab-3.x-tab-active { background: url("../icons/nav-about-selected.png") no-repeat top center !important; background-size: 40px 40px !important;}
+
+#bottomNav .x-layout-box {
+    background:#CCCCCC;
+	color:#333333;
+}
+	
+/* Overrides */
+.x-list-item {
+	min-height:40px !important;
+}
+
+.x-panel.x-floating, .x-msgbox, .x-form.x-floating {
+	background: #FFFFFF !important;
+}
+
+.x-button.x-button-back:before, .x-button.x-button-forward:before, .x-toolbar .x-button.x-button-back:before, .x-toolbar .x-button.x-button-forward:before {
+	background: none !important;
+}
+
+
+.x-title, .x-msgbox-dark .x-msgbox-text {
+	color: #333333 !important;
+	text-shadow: none !important;
+}
+	
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+	    #directionsUI { background-image:url(../icons/search.png) }
+		#routeOptions .icon.DRIVE { background-image: url(../icons/drive.png) }
+		#bottomNav #ext-tab-1 { background-image: url(../icons/nav-directions.png) }
+		#bottomNav #ext-tab-2 { background-image: url(../icons/nav-parking.png) }
+		#bottomNav #ext-tab-3 { background-image: url(../icons/nav-about.png) }
+		
+}
